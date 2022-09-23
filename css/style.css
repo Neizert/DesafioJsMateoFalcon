@@ -1,0 +1,19 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 div{
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    background-color: #a1b16f;
+    padding: 0 0.4rem;
+    font-style: italic;
+    border: 1px solid black;
+    text-align: center;
+}
+
+h2 div{
+    padding: 2px;
+    border-top: 1px solid black;
+    text-align: center;
+}
