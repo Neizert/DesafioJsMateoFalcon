@@ -28,20 +28,27 @@ switch (ingreso) {
         break;
 }
 ingreso = prompt("Bienvenido a mi tienda de comidas\nElige algo del menú para agregar al carrito: \n1- Pizza\n2- Empanadas\n3- Hamburguesa\n4- Panchos\n5- Papas fritas\n Presiona X para terminar de agregar al carrito");
-if(ingreso == "x" || ingreso == "X"){
-    let compra = prompt("El precio total es: $" + precioTotal+"\n Desea realizar la compra?:\n1- Si\n2- No" );
-    if(compra == 1){
-        let pago = prompt("Ingrese la cantidad de dinero con la que desea pagar");
-        if(pago >= precioTotal){
-            let vuelto = pago - precioTotal;
-            alert("Gracias por su compra, su vuelto es de: $" + vuelto);
-        }
-        else{
-            alert("Dinero insuficiente");
+finalizarCompra();
+
+
+function finalizarCompra(){
+    if(ingreso == "x" || ingreso == "X"){
+        let compra = prompt("El precio total es: $" + precioTotal+"\n Desea realizar la compra?:\n1- Si\n2- No" );
+        if(compra == 1){
+            let pago = prompt("Ingrese la cantidad de dinero con la que desea pagar");
+            if(pago >= precioTotal){
+                let vuelto = pago - precioTotal;
+                alert("Gracias por su compra, su vuelto es de: $" + vuelto +"\n Que tenga buen día");
             }
-        }
-        else{
-            alert("Que tenga buen día");
+            else{
+                alert("Dinero insuficiente");
+                finalizarCompra();
+                }
+            }
+            else{
+                alert("Que tenga buen día");
+            }
         }
     }
 }
+
